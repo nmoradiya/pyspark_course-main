@@ -1,5 +1,9 @@
 # Databricks notebook source
-df=spark.read.csv("/Volumes/training/my_volume/my_volume/my_folder/customers.csv")
+# /// script
+# [tool.databricks.environment]
+# environment_version = "2"
+# ///
+df=spark.read.csv("/Volumes/dblearn_nk/raw_datafiles/sourcefiles/csv_files/sales.csv")
 
 display(df)
 
@@ -7,7 +11,7 @@ display(df)
 
 df=spark.read.\
 option("header","true")\
-.csv("/Volumes/training/my_volume/my_volume/my_folder/customers.csv")
+.csv("/Volumes/dblearn_nk/raw_datafiles/sourcefiles/csv_files/sales.csv")
 
 display(df)
 
@@ -16,7 +20,7 @@ display(df)
 df=spark.read.\
 option("header","true")\
 .option("inferSchema","true")\
-.csv("/Volumes/training/my_volume/my_volume/my_folder/customers.csv")
+.csv("/Volumes/dblearn_nk/raw_datafiles/sourcefiles/csv_files/sales.csv")
 
 display(df)
 
